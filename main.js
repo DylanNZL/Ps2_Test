@@ -1,8 +1,8 @@
 /**
  * Created by Dylan on 11-Sep-15.
  */
-function outfitdetails() {
-    var outfit = "FCLM";
+function outfitFunction() {
+    var outfit = document.getElementById("searchTag").value;
     outfit = outfit.toLowerCase();
     var url1 = "http://census.daybreakgames.com/get/ps2:v2/outfit?alias_lower=" + outfit;
     var url;
@@ -11,7 +11,6 @@ function outfitdetails() {
         dataType: 'jsonp'
     }).done(function (data) {
         url = "http://census.psarchives.com/outfit?id=" + data.outfit_list[0].outfit_id;
-
         $.ajax({
             url: url,
             dataType: 'jsonp'
@@ -52,10 +51,10 @@ function outfitdetails() {
         });
     });
 }
-var el = document.getElementById'searchbar');
+var el = document.getElementById('searchTag');
 el.addEventListener("submit", function() {
         preventDefault();
-        outfitdetails();},
-    true);
+        outfitdetails();
+    });
 
 
