@@ -1,8 +1,13 @@
 /**
  * Created by Dylan on 11-Sep-15.
  */
-function outfitFunction() {
-    var outfit = document.getElementById("searchTag").value;
+var outfitdetails = (function() {
+    var form = document.getElementById('searchbar');
+    document.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var elements = this.elements;
+        var outfit = elements.searchTag.value;
+    /* var outfit = "fclm";*/
     outfit = outfit.toLowerCase();
     var url1 = "http://census.daybreakgames.com/get/ps2:v2/outfit?alias_lower=" + outfit;
     var url;
@@ -49,12 +54,14 @@ function outfitFunction() {
             $('#avgkph').append($('<p class="inline"/>').html(data.query.kph));
             $('#avgbr').append($('<p class="inline"/>').html(data.query.ave_rank_score));
         });
-    });
-}
-var el = document.getElementById('searchTag');
-el.addEventListener("submit", function() {
+    })
+})
+}());
+
+/*var el = document.getElementById('searchTag');
+el.addEventListener("click", function() {
         preventDefault();
         outfitdetails();
     });
 
-
+*/

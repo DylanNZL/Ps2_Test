@@ -11,9 +11,9 @@
         <div id="titlebar">
             <div id="title" class="inlineblock"><h1>Planetmans StatSide 2</h1></div>
             <div id="inputdiv" class="inlineblock">
-            <form id="searchbar" onsubmit="outfitFunction()">
+            <form id="searchbar" method="post">
                 <h4>Outfit:
-                    <input id="searchTag" type="text" name="outfitName" size ="4" maxlength="4" placeholder="FCLM"/>
+                    <input type="text" id="searchTag" name="outfit" size ="4" maxlength="4" placeholder="FCLM"/>
                 </h4>
                 </form>
             </div>
@@ -71,14 +71,16 @@
             </div>
             <div class="chardata" id="outfit_members">
                 <div id="players_stats_names">
-                    <table id="list">
-                        <tr>
+                    <table id="list" class="tablesorter">
+                        <thead>
                             <th>Player Name</th>
                             <th>Battle Rank</th>
                             <th>K/D</th>
                             <th>Score Per Minute</th>
                             <th>Kills Per Hour</th>
-                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
                     </table>
                 </div>
             </div>
