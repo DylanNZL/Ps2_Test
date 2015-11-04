@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ps2 stats site testing</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="images/favicon_1_32px.jpg">
+
+</head>
+<body>
+    <div id="main">
+        <div id="titlebar">
+            <div id="title" class="inlineblock"><h1>Planetmans StatSide 2</h1></div>
+            <div id="inputdiv" class="inlineblock">
+            <form id="searchbar" onsubmit="outfitdetails()">
+                <h4>Outfit:
+                    <input id="outfittag" type="text" name="outfitname" size ="4" maxlength="4" placeholder="FCLM"/>
+                </h4>
+                </form>
+            </div>
+        </div>
+        <div id="container">
+            <div id="basicstats">
+                <div id="basicstats_title">
+                    <h2 class="inline">[</h2>
+                    <p id="tag"></p>
+                    <h2 class="inline">] </h2>
+                    <p id="outfitname"></p>
+                    <h2 class="inline"> (</h2>
+                    <p class="inline" id="membertotal"></p>
+                    <h2 class="inline">) </h2>
+                </div>
+                <div class="overall" id="allavg">
+                    <h3>Average Stats</h3>
+                    <h4 class="inline">Average Score:  </h4>
+                    <p class="inline" id="avgscore"></p><br>
+                    <h4 class="inline">Average Time:  </h4>
+                    <p class="inline" id="avgtime"></p><br>
+                    <h4 class="inline">Average Kills:  </h4>
+                    <p class="inline" id="avgkills"></p><br>
+                    <h4 class="inline">Average Deaths:  </h4>
+                    <p class="inline" id="avgdeaths"></p><br>
+                    <h4 class="inline">Average Battle Rank (BR): </h4>
+                    <p class="inline" id="avgbr"></p><br><br>
+
+                </div>
+                <div class="overall" id="alllifetime">
+                    <h3>Lifetime Stats</h3>
+                    <h4 class="inline">Total Score:  </h4>
+                    <p class="inline" id="outfitscore"></p><br>
+                    <h4 class="inline">Total Time:  </h4>
+                    <p class="inline" id="outfittime"></p><br>
+                    <h4 class="inline">Total Kills:  </h4>
+                    <p class="inline" id="outfitkills"></p><br>
+                    <h4 class="inline">Total Deaths:  </h4>
+                    <p class="inline" id="outfitdeaths"></p><br><br><br>
+                </div>
+                <div class="overall" id="wierdstats">
+                    <h3>Extra Stats</h3>
+                    <h4 class="inline">Formed on:   </h4>
+                    <p class="inline" id="formed"></p><br>
+                    <h4 class="inline">Activity:  </h4>
+                    <p class="inline" id="activity"></p><br>
+                    <h4 class="inline">Average KDR:  </h4>
+                    <p class="inline" id="avgkdr"></p><br>
+                    <h4 class="inline">Score Per Minute (SPM): </h4>
+                    <p class="inline" id="avgspm"></p><br>
+                    <h4 class="inline">Kills Per Hour (KPH): </h4>
+                    <p class="inline" id="avgkph"></p><br><br>
+
+                </div>
+            </div>
+            <div class="chardata" id="outfit_members">
+                <div id="players_stats_names">
+                    <table id="list">
+                        <tr>
+                            <th>Player Name</th>
+                            <th>Battle Rank</th>
+                            <th>K/D</th>
+                            <th>Score Per Minute</th>
+                            <th>Kills Per Hour</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
