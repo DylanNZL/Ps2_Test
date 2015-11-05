@@ -22,6 +22,7 @@ var outfitdetails = (function() {
                 var $list = $('#list');
                 $.each(data.members, function (i, member) {
                     $list.append($('<tr/>').html('<td>' + member.name + '</td>' + '<td>' + member.rank + '</td>' + '<td>' + member.stat_kdr + '</td>' + '<td>' + member.stat_spm + '</td>' + '<td>' + member.stat_kph + '</td>'));
+
                 });
                 var avkills, avdeaths, intdeaths, intsize, intkills;
                 var $avgkills = $('#avgkills');
@@ -58,10 +59,3 @@ var outfitdetails = (function() {
     })
 }());
 
-/*var el = document.getElementById('searchTag');
-el.addEventListener("click", function() {
-        preventDefault();
-        outfitdetails();
-    });
-
-*/

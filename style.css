@@ -1,9 +1,14 @@
 body {
-    background-color: #111;
+    background-color: #000;
     text-align: center;
+    background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 #main {
-    background-color: #343434;
+    background-color: ;
+
     width: 80%;
     margin-left: 10%;
 }
@@ -13,6 +18,7 @@ body {
     color: #111;
     margin-bottom: 10px;
     text-align: center;
+
 }
 #title {
     width: 89%;
@@ -68,5 +74,21 @@ body {
     background-color: #aaaaaa;
 }
 #list td {
+    border: 1px solid black;
+}
+table.sortable tbody {
+    counter-reset: sortabletablescope;
+}
+table.sortable thead tr::before {
+    content: "#";
+    display: table-cell;
+    border: 1px solid black;
+    background-color: #aaaaaa;
+}
+table.sortable tbody tr::before {
+    content: counter(sortabletablescope);
+    counter-increment: sortabletablescope;
+    display: table-cell;
+    border-collapse: collapse;
     border: 1px solid black;
 }
