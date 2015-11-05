@@ -54,6 +54,7 @@ var outfitdetails = (function() {
                 $('#avgbr').append($('<p class="inline"/>').html(data.query.ave_rank_score));
             });
         })
+        var newTableObject = document.getElementById('list');
     })
 }());
 
